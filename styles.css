@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/lemonmilk");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Libre Baskerville", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html a {
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+
+nav,
+main.container,
+section,
+section.contact > div > div,
+form,
+.right > div,
+.social-media-container > div,
+.grid-container > div {
+  display: flex;
+}
+
+body {
+  padding-top: 5rem;
+  max-width: 100vw;
+  min-height: 80vh;
+  font-family: "Libre Baskerville", serif;
+}
+body h1,
+body h2 {
+  font-family: "Lemon/Milk", sans-serif;
+}
+body h1 {
+  width: 30rem;
+  font-size: 4rem;
+  text-align: justify;
+}
+body h2 {
+  font-size: 2rem;
+}
+
+nav {
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 0 5rem;
+  background-color: lightgray;
+  width: 100%;
+  height: 5rem;
+}
+nav img {
+  width: 10rem;
+  height: 10rem;
+}
+nav ul {
+  display: flex;
+}
+nav ul a {
+  color: black;
+  text-decoration: none;
+}
+nav ul li {
+  font-family: "Libre Baskerville", serif;
+  list-style: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  transition: 0.7s;
+}
+nav ul a:hover {
+  color: white;
+}
+nav ul li:hover {
+  background-color: black;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+main.container {
+  padding: 0 5rem;
+  flex-direction: column;
+}
+main.container section {
+  padding: 2rem 0;
+  border-bottom: 1px solid lightgray;
+}
+main.container section.jumbotron {
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  min-height: 100vh;
+}
+main.container section.jumbotron .left {
+  width: 50vw;
+  line-height: 4rem;
+}
+main.container section.jumbotron .left p {
+  width: 39rem;
+  line-height: normal;
+  margin: 2rem 0;
+}
+main.container section.jumbotron .left button {
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main.container section.jumbotron .left button a {
+  color: black;
+  text-decoration: none;
+}
+main.container section.jumbotron .left button a:hover {
+  color: white;
+}
+main.container section.jumbotron .left button:hover {
+  background-color: black;
+  color: white;
+}
+main.container section.about-me {
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  min-height: 50vh;
+}
+main.container .left {
+  width: 50%;
+}
+main.container .left p {
+  width: 39rem;
+  margin: 2rem 0;
+  text-align: justify;
+}
+main.container .left table {
+  border-collapse: collapse;
+}
+main.container .left table td {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
+}
+main.container .left table tr:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+main.container .left table td.td-header {
+  padding-right: 2rem;
+  font-weight: 700;
+}
+main.container .right img {
+  background-color: red;
+  width: 40rem;
+}
+main.container section.skill {
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  min-height: 45vh;
+}
+main.container section.skill .grid-container {
+  align-self: center;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  justify-content: space-between;
+  grid-template-rows: 10rem;
+}
+main.container section.skill .grid-container .item {
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: 10px 10px 25px 1px lightgray;
+}
+main.container section.skill .grid-container .item i {
+  font-size: 3rem;
+}
+main.container section.skill .grid-container .item img {
+  width: 100%;
+  height: 100%;
+}
+main.container section.skill .grid-container .item-container {
+  flex-direction: column;
+}
+main.container section.portfolio {
+  max-width: 100vw;
+  min-height: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  grid-auto-flow: dense;
+}
+main.container section.portfolio h2 {
+  align-self: flex-start;
+}
+main.container section.portfolio a {
+  color: black;
+}
+main.container section.portfolio a:hover {
+  color: gray;
+}
+main.container section.portfolio .grid-container-portfolio {
+  z-index: -1;
+  width: 50%;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main.container section.portfolio .grid-container-portfolio .item {
+  max-width: 40%;
+  height: 10rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  box-shadow: 10px 10px 25px 1px lightgray;
+  cursor: pointer;
+  overflow: hidden;
+}
+main.container section.portfolio .grid-container-portfolio img {
+  scale: 1.1;
+  width: 100%;
+  height: 100%;
+}
+main.container section.contact {
+  max-width: 50%;
+  min-height: 20vh;
+  flex-direction: column;
+}
+main.container section.contact .message {
+  flex-direction: column;
+  width: 100%;
+  float: left;
+}
+main.container section.contact .message form {
+  flex-direction: column;
+}
+main.container section.contact .message label {
+  font-weight: 700;
+}
+main.container section.contact .message input,
+main.container section.contact .message textarea {
+  margin: 0.5rem 0;
+  max-width: 50%;
+  padding-left: 0.5rem;
+  height: 2.5rem;
+  background-color: lightgray;
+  border: none;
+  border-radius: 1rem;
+}
+main.container section.contact .message textarea {
+  min-height: 4rem;
+}
+main.container section.contact .message input:focus,
+main.container section.contact .message textarea:focus {
+  outline-color: lightgray;
+}
+main.container section.contact .message input[type=submit] {
+  padding-left: 0;
+  width: 25%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main.container section.contact .message input[type=submit]:hover {
+  background-color: black;
+  color: white;
+}
+main.container section.contact .social-media {
+  width: 40%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+main.container section.contact .social-media .social-media-container {
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+}
+main.container section.contact .social-media .social-media-container div {
+  align-items: center;
+}
+main.container section.contact .social-media .social-media-container a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+main.container section.contact .social-media .social-media-container a:hover {
+  color: gray;
+}
+main.container section.contact .social-media i {
+  font-size: 2rem;
+  margin-right: 5rem;
+}
+
+footer {
+  padding: 1rem;
+  color: black;
+  background-color: lightgrey;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
