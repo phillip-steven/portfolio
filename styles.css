@@ -1,11 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/lemonmilk");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Libre Baskerville", serif;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*=col-] {
+  float: left;
+  padding: 15px;
 }
 
 html {
@@ -14,7 +73,6 @@ html {
 html a {
   display: inline-block;
   z-index: 1;
-  position: relative;
 }
 
 nav,
@@ -30,8 +88,8 @@ form,
 
 body {
   padding-top: 5rem;
-  max-width: 100vw;
-  min-height: 80vh;
+  width: 100vw;
+  min-height: 100vh;
   font-family: "Libre Baskerville", serif;
 }
 body h1,
@@ -52,6 +110,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 2;
   top: 0;
   padding: 0 5rem;
   background-color: lightgray;
@@ -87,6 +146,7 @@ nav ul li:hover {
 }
 
 main.container {
+  background-color: white;
   padding: 0 5rem;
   flex-direction: column;
 }
@@ -97,11 +157,9 @@ main.container section {
 main.container section.jumbotron {
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
   min-height: 100vh;
 }
 main.container section.jumbotron .left {
-  width: 50vw;
   line-height: 4rem;
 }
 main.container section.jumbotron .left p {
@@ -130,7 +188,6 @@ main.container section.jumbotron .left button:hover {
 main.container section.about-me {
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
   min-height: 50vh;
 }
 main.container .left {
@@ -211,7 +268,7 @@ main.container section.portfolio a:hover {
   color: gray;
 }
 main.container section.portfolio .grid-container-portfolio {
-  z-index: -1;
+  z-index: 0;
   width: 50%;
   min-height: 20vh;
   display: flex;
@@ -277,7 +334,6 @@ main.container section.contact .message input[type=submit]:hover {
   color: white;
 }
 main.container section.contact .social-media {
-  width: 40%;
   justify-content: space-between;
   flex-direction: column;
 }
