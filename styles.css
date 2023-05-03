@@ -368,6 +368,9 @@ footer {
   [class*=col-] {
     width: 100%;
   }
+  body {
+    padding-top: 0;
+  }
   nav {
     display: none;
     justify-content: center;
@@ -383,7 +386,7 @@ footer {
     grid-gap: 1rem;
   }
   main.container section.jumbotron {
-    min-height: 50vh;
+    min-height: 10vh;
   }
   main.container section.jumbotron h1 {
     font-size: 3rem;

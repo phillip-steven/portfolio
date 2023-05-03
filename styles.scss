@@ -362,7 +362,6 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-
   color: black;
   background-color: lightgrey;
   text-align: center;
@@ -371,6 +370,9 @@ footer {
 @media only screen and (max-width: 768px) {
   [class*="col-"] {
     width: 100%;
+  }
+  body {
+    padding-top: 0;
   }
   nav {
     display: none;
@@ -388,7 +390,7 @@ footer {
       }
     }
     section.jumbotron {
-      min-height: 50vh;
+      min-height: 10vh;
       h1 {
         font-size: 3rem;
         line-height: 3rem;
