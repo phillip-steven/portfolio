@@ -176,11 +176,13 @@
           <div class="message col-6">
             <h2>Contact Me</h2>
             <form
-              action="#"
-              method="post"
               name="contact-me-form"
               id="contact-me-form"
+              onsubmit="sendEmail(); reset(); return false"
             >
+              <label for="name">Name</label>
+              <input type="text" class="name" name="name" id="name" />
+
               <label for="email">Email</label>
               <input
                 type="email"
@@ -224,5 +226,27 @@
         <h3>Copyright : @I Putu Phillip Steven</h3>
       </footer>
     </div>
+
+    <!-- SEND EMAIL -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "putu.phillip@gmail.com",
+          Password: "E1A73A7898B61A588E4417010F1724DD5913",
+          To: "putu.phillip@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "Hi, i want to get in touch",
+          Body:
+            "Name" +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message sent successfully"));
+      }
+    </script>
   </body>
 </html>
