@@ -178,7 +178,7 @@
             <form
               name="contact-me-form"
               id="contact-me-form"
-              onsubmit="sendEmail(); reset(); return false"
+              onsubmit="sendEmail(); reset(); return false;"
             >
               <label for="name">Name</label>
               <input type="text" class="name" name="name" id="name" />
@@ -233,17 +233,17 @@
       function sendEmail() {
         Email.send({
           Host: "smtp.elasticemail.com",
-          Username: "putu.phillip@gmail.com",
-          Password: "E1A73A7898B61A588E4417010F1724DD5913",
+          Username: "epan.boyek@gmail.com",
+          Password: "C30904B6BE7B62C73245C17F248CF9A3BA40",
           To: "putu.phillip@gmail.com",
-          From: document.getElementById("email").value,
+          From: "epan.boyek@gmail.com",
           Subject: "Hi, i want to get in touch",
           Body:
-            "Name" +
+            "Name: " +
             document.getElementById("name").value +
-            "<br> Email: " +
+            "<br>Email: " +
             document.getElementById("email").value +
-            "<br> Message: " +
+            "<br>Message: " +
             document.getElementById("message").value,
         }).then((message) => alert("Message sent successfully"));
       }
